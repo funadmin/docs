@@ -138,3 +138,4 @@ public function index()
 - 在后台对应静态文件目录添加一个 控制器名.js  （注意js文件名必须小写）修改里面的地址即可
 
 
+[filename](powered.md ':include')

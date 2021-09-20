@@ -271,6 +271,7 @@ require(['form'],function (Form){
     }
 })
 ~~~
-## 全局js 在后台禁用插件后js 则失效
+> 全局js 在后台禁用插件后js 则失效
 
 
+[filename](powered.md ':include')

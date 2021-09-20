@@ -48,3 +48,4 @@
 
 遇到问题到[社区](https://bbs.funadmin.com/)或QQ群：[775616363](https://jq.qq.com/?_wv=1027&k=RAvbwgRY)反馈
 
+[filename](powered.md ':include')

@@ -19,3 +19,4 @@ location / {
 ## 插件安装没有权限的问题
 * 进入linux控制台 命令 chmod -R 755 '目录文件夹'
 
+[filename](powered.md ':include')

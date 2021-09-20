@@ -47,3 +47,6 @@
 │   ├── uninstall.sql
 │   ├── 其他
 ~~~
+
+
+[filename](powered.md ':include')

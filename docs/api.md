@@ -115,3 +115,5 @@ $noAuth = [‘user’]
 对以上生成的鉴权密文，在头部header设置authentication关键字的值为 `uid base64密文` 即可进行api请求，如没有设置关键字，默认为authentication
 
 ![](images/image-20210419140002052.png)
+
+[filename](powered.md ':include')
