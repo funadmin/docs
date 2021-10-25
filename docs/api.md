@@ -16,6 +16,8 @@
 
 ## jwt接口文档
 
+- 建议使用jwt作为接口
+
 开启jwt 接口  `config/api.php`  配置`is_jwt `设置为true 
 
 ### 一、请求获取token
