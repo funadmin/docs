@@ -20,12 +20,26 @@
 
 ### 一、请求获取token
 #### 地址api/v1.jwtToken/accessToken
+
+| 参数      | 说明           | 默认       |
+| --------- | -------------- | ---------- |
+| username  | 用户名或手机号 | -          |
+| password  | 密码           | -          |
+| timestamp | 时间戳         | 当前时间戳 |
+
 ![](.\images\1.jpg)
 
 
 ### 二、请求接口
 
 #### 地址api/v1.member/index 
+
+| 参数           | 说明                         | 默认            |
+| -------------- | ---------------------------- | --------------- |
+| authentication | 配置中authentication头部参数 | 上面获取的token |
+| 其他           | 其他post或者get参数          | -               |
+
+
 
 #### 获取上面的`access_token` 然后把token放到请求头部,头部参数可以在`config/api.php`定义
 
@@ -39,7 +53,11 @@
 
 #### 请求地址为` api/v1.jwtToken/refresh` `参数` `refresh_token`
 
-#### 
+| 参数          | 说明          | 默认                    |
+| ------------- | ------------- | ----------------------- |
+| refresh_token | refresh_token | 上面获取的tefresh_token |
+
+ 
 
 ## 普通接口文档
 
