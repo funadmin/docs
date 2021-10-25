@@ -21,11 +21,13 @@
 ### 一、请求获取token
 #### 地址api/v1.jwtToken/accessToken
 
-| 参数      | 说明           | 默认       |
-| --------- | -------------- | ---------- |
-| username  | 用户名或手机号 | -          |
-| password  | 密码           | -          |
-| timestamp | 时间戳         | 当前时间戳 |
+| 参数      | 说明           | 默认                                        |
+| --------- | -------------- | ------------------------------------------- |
+| username  | 用户名或手机号 | -                                           |
+| password  | 密码           | -                                           |
+| timestamp | 时间戳         | 当前时间戳                                  |
+| appid     | appid          | 当authapp 设置为false时 不需要填写 否则必填 |
+| appsecret | appsecret      | 当authapp 设置为false时 不需要填写 否则必填 |
 
 ![](.\images\1.jpg)
 
