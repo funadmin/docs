@@ -1,5 +1,49 @@
-## FunAdmin API 接口文档
-## 一、多应用API数据配置
+# FunAdmin API 接口文档
+
+
+
+| 公共参数       | 说明                    | 默认值           |
+| :------------- | ----------------------- | ---------------- |
+| appsecret      | appid                   | 默认为数据库里的 |
+| authapp        | 是否启用appid           | true             |
+| timeDif        | 时间间隔                | 10000            |
+| refreshExpires | 刷新token有效期         | 3600 * 24 * 30   |
+| expires        | token有效期             | 7200*12          |
+| responseType   | 响应类型                | json             |
+| key            | jwt_key 在配置api文件里 | funadmin         |
+
+![](.\images\2.jpg)
+
+## jwt接口文档
+
+开启jwt 接口  `config/api.php`  配置`is_jwt `设置为true 
+
+### 一、请求获取token
+#### 地址api/v1.jwtToken/accessToken
+![](.\images\1.jpg)
+
+
+### 二、请求接口
+
+#### 地址api/v1.member/index 
+
+#### 获取上面的`access_token` 然后把token放到请求头部,头部参数可以在`config/api.php`定义
+
+![](.\images\3.jpg)
+
+![](.\images\4.jpg)
+
+到此接口请求完成
+
+### 三、刷新token 
+
+#### 请求地址为` api/v1.jwtToken/refresh` `参数` `refresh_token`
+
+#### 
+
+## 普通接口文档
+
+### 一、多应用API数据配置
 -    表名: <表前缀>_oatuh2_client
      ![](images/image-20210419120801324.png)
 
@@ -7,10 +51,10 @@
 
 > 2、目前api的设置暂未有入口，可自行在后台编写配置操作的界面。
 
-## 二 、access-token 获取
+### 二 、access-token 获取
 >  1、生成authentication前需要获取access-token，获取access-token方法在Token控制器父类fun\auth\Token中的accessToken方法
 
-[comment]: <> (![]&#40;images/screenshot_1621329748530.png&#41;)
+[comment]: <> "![]&#40;images/screenshot_1621329748530.png&#41;"
 
      -在api的路由配置中已经写好了token获取的路由,请无视原注释，访问路径  xxx.com/api/v1/token
 
@@ -35,7 +79,7 @@ Route::post(':version/token/refresh','api/:version.token/refresh');
 
   ·sign:签名
   
-  ```
+```
 **`sign生成算法:对以上除sign外的所有属性+ key=appsecret 
 按key首字母进行升序排序后，
 对新数组进行http_build_query转url参数形式的字符串 
@@ -81,7 +125,7 @@ sign = strtolower(md5(urldecode(http_build_query($params))));
 
 
 
-## 三、authentication的生成
+### 三、authentication的生成
 
 > 1、在进行api请求时，需要先生成authentication用于api请求，authentication鉴权的关键字可以自定义，在api应用下的config文件夹内定义authentication即可   
 
@@ -106,11 +150,11 @@ return [
 >  3、不需要鉴权的则在  控制器内 noAuth属性 加入不需要鉴权的方法即可 //例如
  ~~~
 $noAuth = [‘user’] 
-~~~
+ ~~~
 
 
 
-## 四、Api请求
+### 四、Api请求
 
 对以上生成的鉴权密文，在头部header设置authentication关键字的值为 `uid base64密文` 即可进行api请求，如没有设置关键字，默认为authentication
 

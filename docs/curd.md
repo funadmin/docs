@@ -12,6 +12,9 @@ php think curd -t test
 # 生成fun_test表的CURD, 文件冲突时强制覆盖
 php think curd -t test -f 1
 
+# 生成fun_test表的前台模块CURD, 文件冲突时强制覆盖
+php think curd -t test -b frontend 
+
 # 强制删除fun_test表的CURD  
 php think curd -t test -d 1  -f 1 
 
@@ -48,6 +51,12 @@ php think curd -t test --imageSuffix=logo
 - c 控制器目录  如果是插件模式，不需要完整目录
 - f  强制模式
 - d 删除模式
+
+```
+php think menu demo/test 
+```
+
+
 
 
 
