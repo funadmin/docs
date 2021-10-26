@@ -2,9 +2,10 @@
 
 
 
-| 公共参数       | 说明                    | 默认值           |
+| 公共系统参数   | 说明                    | 默认值           |
 | :------------- | ----------------------- | ---------------- |
-| appsecret      | appid                   | 默认为数据库里的 |
+| appid          | appid                   | 默认为数据库里的 |
+| appsecret      | appsecret               | 默认为数据库里的 |
 | authapp        | 是否启用appid           | true             |
 | timeDif        | 时间间隔                | 10000            |
 | refreshExpires | 刷新token有效期         | 3600 * 24 * 30   |
