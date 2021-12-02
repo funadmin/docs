@@ -316,9 +316,11 @@ edit_full:{
 },
 ~~~
 这里自定义的函数要在js 里自己写，会自动调用的
+~~~
 demo = function(obj){
     console.log(obj)
 };
+~~~
 
 > 注意 extend 里面可以写对象，也可以是字符串  你可以在里面自定义样式或者其他属性
 
