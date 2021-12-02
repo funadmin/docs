@@ -312,13 +312,13 @@ edit_full:{
     // full: 1,
     width:'800',
     height:'600',
-    extend:'data-callback="demo(this)"'
+    extend:'data-callback="demo()"'
 },
 ~~~
 这里自定义的函数要在js 里自己写，会自动调用的
 ~~~
-demo = function(obj){
-    console.log(obj)
+demo = function(){
+    console.log(111)
 };
 ~~~
 
