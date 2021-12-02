@@ -312,13 +312,13 @@ edit_full:{
     // full: 1,
     width:'800',
     height:'600',
-    extend:'data-callback="demo()"'
+    extend:'data-callback="demo(可以填写参数)"'
 },
 ~~~
 这里自定义的函数要在js 里自己写，会自动调用的
 ~~~
-demo = function(){
-    console.log(111)
+demo = function(可以填写参数){
+    console.log(可以填写参数)
 };
 ~~~
 
