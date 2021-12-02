@@ -23,7 +23,9 @@ define(['jquery','table','form'], function ($,Table,Form) {
                         title: __('Add'),//标题及按钮文字
                        // full: 1,
                         width:800,//窗口的大小
-                        height:800
+                        height:800,
+                        extend:'',      // 弹窗按钮可以这样写 extend:"data-btn='false'",//默认不写是‘submit,close’,参数有：submit(只显示提交),close(只显示关闭),false(不显示按钮)
+
                     },
                     edit_full:{
                         type: 'open',
