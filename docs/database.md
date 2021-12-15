@@ -2,7 +2,7 @@
 - 默认使用fun_ 开头， 也可以在安装的时候替换为你需要的 数据库表建议默认设置 delete_time =0  软删除字段  
 
 // 软删除
-User::destroy(1);
+```User::destroy(1);
 // 真实删除
 User::destroy(1,true);
 
@@ -10,7 +10,7 @@ $user = User::find(1);
 // 软删除
 $user->delete();
 // 真实删除
-$user->force()->delete();
+$user->force()->delete();```
 
 
 默认情况下查询的数据不包含软删除数据，如果需要包含软删除的数据，可以使用下面的方式查询：
