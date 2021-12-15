@@ -30,8 +30,8 @@ $user->restore();
 软删除的删除操作仅对模型的删除方法有效，如果直接使用数据库的删除方法则无效，例如下面的方式无效。
 
 $user = new User;
-```
-$user->where('id',1)->delete();
 
+$user->where('id',1)->delete();
+```
 
 [filename](powered.md ':include')
