@@ -1,4 +1,9 @@
 ## 前端js模板
+
+- js 默认是开发模式 
+- 如果需要关闭开发模式 ；可以在后台配置中设置 app_debug 为0 
+- 打包js 进入static 目录 并使用node r.js -o backend-build.js 命令打包后端js 加快浏览速度
+- node r.js -o frontend-build.js 打包前台js
 ~~~
 define(['jquery','table','form'], function ($,Table,Form) {
     let Controller = {
