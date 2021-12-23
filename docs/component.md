@@ -329,7 +329,7 @@ form_editor($name='container',$id='container',$type=1,$options=[])
 
 - `name `富文本名
 - `id `富文本id
-- `type  `  1 =>layeditor  ,  2 => 其他，比如百度，quill  wangEditor jodit ,codemirror等编辑器
+- `type  `  2 =>layeditor  ,  1 => 其他，比如百度，quill  wangEditor jodit ,codemirror等编辑器
 - options  基础属性 
   - label label 显示的值
   - verify验证 常见的可参考layui表单
