@@ -11,6 +11,5 @@
 * [API](api.md)
 * [插件](addon.md)
 * [插件开发](plugin.md)
-* [CMS开发](cms.md)
 * [MOCMS开发](mocms.md)
 * [常见问题](faq.md)
