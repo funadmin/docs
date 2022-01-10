@@ -224,6 +224,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - `Table.templet.operat`  操作方法
 - `Table.templet.time`  操作方法
 - `Table.templet.select`  select
+- `Table.templet.selects`  select下拉框
 - `Table.templet.tags`  tag
 
 
