@@ -295,7 +295,32 @@ form_select($name = null,$select=[], $options = [],$attr='',$value=null)
 - `select` 表单列表
 - `attr`   表单属性 例如，‘id,title’
 - `value`  默认选择的value
--   默认选中value为 'text'的实例：{:form_select('type', $msgType, ['label' => 'Type', 'verify' => 'required'],'', 'text')}
+-   默认选中value为 'text'的实例：{:form_select('name', $selectList, ['label' => 'Type', 'verify' => 'required'],'')}
+
+## form_selectplus  下拉加强版组件
+~~~
+form_selectplus($name = null,$select=[], $options = [],$attr='',$value=null)
+~~~
+- `name ` 表单名
+- `select` 表单列表
+- `attr`   表单属性 例如，‘id,title’
+- `value`  默认选择的value
+- `options`  url获取数据url,delimiter 分隔符，multiple 是否多选
+-   默认选中value为 'text'的实例：{:form_selectplus($name = null,$select=[], $options = [],$attr='',$value='')}
+
+
+## form_selectn  级联选择器
+~~~
+form_selectn($name = null,$select=[], $options = [],$attr='',$value=null)
+~~~
+- `name ` 表单名
+- `select` 表单列表
+- `attr`   表单属性 例如，‘id,title’
+- `value`  默认选择的value
+- `options`  url获取数据url,num 下拉框数量默认3,delimiter 分隔符,search 是否开启搜索
+-   默认选中value为 'text'的实例：{:form_selectn($name = null,$select=[], $options = [],$attr='',$value='')}
+
+
 ## form_textarea 文本域
 ~~~
 form_textarea($name=‘’, $option=[], $value=‘’)
