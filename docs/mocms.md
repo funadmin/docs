@@ -193,7 +193,7 @@
     ```
     getTopic($id, $field = '', $newCache = true)
     ```
-## getTopic
+## getCategory
   - 获取分类
     ```
      getCategory($cateid, $field = '', $newCache = true)
