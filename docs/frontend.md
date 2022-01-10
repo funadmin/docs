@@ -147,6 +147,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 ## cols参数
 * cols字段属性列表
 - field：对应返回的数据列
+- url 当需要远程获取的数据时 用于模板  select tags  selects 邓
 - title：表格标题
 - align：对齐方式
 - sort：是否排序字段，默认值不显示排序按钮
