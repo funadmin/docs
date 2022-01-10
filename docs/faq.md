@@ -2,7 +2,7 @@
 
 1、关闭开发模式 ；可以在后台配置中设置 app_debug 为0
 
-2、打包js 进入static 目录 
+2、打包js 进入static 目录  需要安装node
 并使用
 ```
 node r.js -o backend-build.js
