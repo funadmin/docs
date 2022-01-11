@@ -22,11 +22,16 @@
 ## 宝塔安装
 *   购买服务器，安装宝塔，部署LNMP环境
 	*   宝塔安装方法 https://www.bt.cn/bbs/thread-19376-1-1.html
-	*   ![Uploading image.png…](安装环境)
+	*   ![image](https://user-images.githubusercontent.com/65004113/148901865-a1b206db-e812-474b-807d-cd9ea85fea3a.png)
+	 
 	*   ![image](https://user-images.githubusercontent.com/65004113/148900062-cd7e95d0-26c4-44a4-ba8e-33820a9642e5.png)
+	   
 	*   ![image](https://user-images.githubusercontent.com/65004113/148901084-a6d5db64-2c37-4dd7-9d08-72253182cdb1.png)
+	  
 	*   ![image](https://user-images.githubusercontent.com/65004113/148901160-92070765-b745-475a-b03e-b5de82526fc0.png)
+	 
 	*   ![image](https://user-images.githubusercontent.com/65004113/148901171-4f19eced-f8c2-4a95-98a5-80c771800721.png)
+	  
 	*   ![image](https://user-images.githubusercontent.com/65004113/148901407-4dea4d07-7394-4cc7-9131-f75ed238445a.png)
 	
 
