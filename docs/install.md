@@ -1,7 +1,7 @@
 ## 环境要求
 * PHP >= 7.4.0  建议7.4或8.X
 * Mysql >= 5.7.0 (需支持innodb引擎) 建议5.7及以上
-* Apache 或 Nginx
+*  Nginx  或 Apache 建议Nginx
 * PDO PHP Extension
 * MBstring PHP Extension
 * CURL PHP Extension
