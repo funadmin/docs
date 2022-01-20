@@ -1,11 +1,22 @@
 ## 环境要求
-* PHP >= 7.2.0  建议7.4或8.0
-* Mysql >= 5.5.0 (需支持innodb引擎) 建议5.7及以上
+* PHP >= 7.4.0  建议7.4或8.X
+* Mysql >= 5.7.0 (需支持innodb引擎) 建议5.7及以上
 * Apache 或 Nginx
 * PDO PHP Extension
 * MBstring PHP Extension
 * CURL PHP Extension
 * Fileinfo PHP Extension
+* 伪静态配置
+
+## composer安装
+* 通过 Composer 创建项目建议
+	* ```composer create-project --prefer-dist funadmin/funadmin funadmin```
+	* ``` composer update  ```
+	*  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
+	*  修改伪静态配置, 请参考下方伪静态设置
+	*  访问[http://www.yoursite.com/install.php](http://www.yoursite.com/install.php)进行安装
+	*  根据图形界面直接安装即可
+	*  安装完成后会自动生成安装锁`public/install.lock`, 如需重新安装, 删掉该文件即可。
 
 ## git安装
 *   使用git克隆资源下来
