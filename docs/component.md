@@ -1,4 +1,4 @@
-## 强大的表单组件祝您快速开发,curd 可以自动生成表单组件
+## 强大的表单组件助您快速开发,curd 可以自动生成表单组件
   
   ```
     {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
