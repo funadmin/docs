@@ -19,10 +19,11 @@
     {:form_region($name='regionCheck',$id='regionCheck',$options = [])}
     {:form_tags($id='tags',$name='',$options = [],$value='')}
     {:form_color($id='iconPicker',$name=null,$options = [],$value='')}
-    {:form_closebtn($reset = true, $options=[])}
+   
     {:form_upload($name=null,$formdata=[],$options=[],$value='')}
     {:form_editor($name='container',$id='container',$type=1,$options=[],$value='')}
     {:form_submitbtn()}
+    {:form_closebtn($reset = true, $options=[])}
   ```
  
  - 基本覆盖了业务所需的常用的组件，如有好的组件可以联系作者增加
