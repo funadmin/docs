@@ -1,5 +1,30 @@
 ## 强大的表单组件祝您快速开发,curd 可以自动生成表单组件
-
+  
+  ```
+    {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
+    {:form_input('mobile','text',['verify'=>'phone'])}
+    {:form_upload('avatar',$formData,['cropper'=>1])}
+    {:form_input('email','text',['verify'=>'email'])}
+    {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+    {:form_checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+    {:form_arrays('name',$arrList,['verify'=>'required','label'=>'name'])}
+    {:form_textarea('name',['verify'=>'required','label'=>'name'])}
+    {:form_select('name',$selectList,['verify'=>'required','label'=>'name','multiple'=>1] ,'id,name')}
+    {:form_selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
+    {:form_radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+    {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+    {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+    {:form_date($name=null,$options = [],$value='')}
+    {:form_city($name='cityPicker',$id='cityPicker',$options = [])}
+    {:form_region($name='regionCheck',$id='regionCheck',$options = [])}
+    {:form_tags($id='tags',$name='',$options = [],$value='')}
+    {:form_color($id='iconPicker',$name=null,$options = [],$value='')}
+    {:form_closebtn($reset = true, $options=[])}
+    {:form_upload($name=null,$formdata=[],$options=[],$value='')}
+    {:form_editor($name='container',$id='container',$type=1,$options=[],$value='')}
+    {:form_submitbtn()}
+  ```
+ 
  - 基本覆盖了业务所需的常用的组件，如有好的组件可以联系作者增加
  
 ### 基础属性
