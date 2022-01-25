@@ -9,7 +9,7 @@
 * 伪静态配置
 
 
-## 命令行安装安装
+## 命令行安装
 * 通过 Composer 创建项目建议
 	* ```composer create-project --prefer-dist funadmin/funadmin funadmin```
 	* ``` composer install  ```
