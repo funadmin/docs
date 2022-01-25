@@ -7,7 +7,7 @@
 * [开发示例](demo.md)
 * [CURD](curd.md)
 * [前端](frontend)
-* [组件](component.md)
+* [表单组件](component.md)
 * [API](api.md)
 * [插件](addon.md)
 * [插件开发](plugin.md)
