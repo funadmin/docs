@@ -7,7 +7,7 @@
 * CURL PHP Extension
 * Fileinfo PHP Extension
 * 伪静态配置
-
+* 启用函数 putenv 安装composer 扩展时用到
 
 ## 命令行安装
 * 通过 Composer 创建项目建议
