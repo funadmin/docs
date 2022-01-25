@@ -12,7 +12,7 @@
 ## 命令行安装
 * 通过 Composer 创建项目建议
 	* ```composer create-project --prefer-dist funadmin/funadmin funadmin```
-	* ``` composer install  ```
+	* ``` cd funadmin &&  composer install  ```
 	*  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
 	*  修改伪静态配置, 请参考下方伪静态设置
 	*  php think install 
@@ -22,7 +22,7 @@
 ## composer安装
 * 通过 Composer 创建项目建议
 	* ```composer create-project --prefer-dist funadmin/funadmin funadmin```
-	* ``` composer install  ```
+	* ```cd funadmin && composer install  ```
 	*  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
 	*  修改伪静态配置, 请参考下方伪静态设置
 	*  访问[http://www.yoursite.com/install.php](http://www.yoursite.com/install.php)进行安装
