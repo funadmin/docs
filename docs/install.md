@@ -69,7 +69,32 @@
     RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
     </IfModule>
     ~~~
+    
+    确保已经启用Apache的伪静态，确保目录已经配置好权限,修改配置
 
+    ```
+    <VirtualHost *:80>
+	    DocumentRoot "/Users/document/myproject/funadmin/public"
+	    ServerName funadmin.com 
+	    ServerAlias funadmin.com  *.funadmin.com
+	    <Directory "/Users/document/myproject/funadmin">
+		AllowOverride All
+		Options Indexes FollowSymLinks
+		Require all granted
+	    </Directory>
+    </VirtualHost>
+	```
+    
+<VirtualHost *:80>
+    DocumentRoot "/Users/Karson/Project/fastadmin/public"
+    ServerName fa.com 
+    ServerAlias fa.com *.fa.com
+    <Directory "/Users/Karson/Project/fastadmin">
+        AllowOverride All
+        Options Indexes FollowSymLinks
+        Require all granted
+    </Directory>
+</VirtualHost>
 * Nginx
     * 修改nginx.conf 配置文件 加入下面的语句
     ~~~
