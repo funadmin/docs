@@ -71,7 +71,7 @@ php think menu -c demo/test -a  demo   -f 1 -d 1
 *   默认`开关`字段：
     *   status
 *   默认`忽略`字段：
-    *   update_time, delete_time,delete_time
+    *   update_time,creat_time,delete_time
 ### 以特殊字符结尾的规则
 *   默认`编辑器`字段后缀：
     * `editor, content， detail, details, description` 
