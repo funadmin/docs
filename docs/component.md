@@ -15,13 +15,14 @@
     {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
     {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
     {:form_date($name=null,$options = [],$value='')}
-    {:form_city($name='cityPicker',$id='cityPicker',$options = [])}
-    {:form_region($name='regionCheck',$id='regionCheck',$options = [])}
-    {:form_tags($id='tags',$name='',$options = [],$value='')}
-    {:form_color($id='iconPicker',$name=null,$options = [],$value='')}
-   
+    {:form_city($name='cityPicker',$options = ['id'=>'cityPicker'])}
+    {:form_region($name='regionCheck',$options = ['id'=>'regionCheck'])}
+    {:form_tags($name='',$options = [id'=>'tags'],$value='')}
+    {:form_color($name=null,$options = ['id'=>'color'],$value='')}
+    {:form_rate($name,$options = ['id'=>'rate'],$value='')}
+    {:form_slider($name,$options = ['id'=>'slider'],$value='')}
     {:form_upload($name=null,$formdata=[],$options=[],$value='')}
-    {:form_editor($name='container',$id='container',$type=1,$options=[],$value='')}
+    {:form_editor($name='container',$type=1,$options=['id'=>'container'],$value='')}
     {:form_submitbtn()}
     {:form_closebtn($reset = true, $options=[])}
   ```
