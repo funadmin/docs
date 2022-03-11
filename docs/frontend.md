@@ -86,6 +86,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
                         width: 120,
                         search: 'select',
                         selectList: {0: __('Disabled'), 1: __('Enabled')},
+                        url:'url地址',//2.2新增 当selectList 为空时可设置url 获取后端url数据
                         tips:__('Enabled')+'|'+__('Disabled'),//开关字段自定义显示文字
                         filter: 'status',
                         templet: Table.templet.switch
