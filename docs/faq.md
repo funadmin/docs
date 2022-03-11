@@ -35,3 +35,19 @@ location / {
 * 进入linux控制台 命令 chmod -R 755 '目录文件夹'
 
 [filename](powered.md ':include')
+
+## 如何关闭弹出窗口的按钮 设置extend:"data-btn=''" 即可
+
+add_full:{
+                type: 'open',
+                class: 'layui-btn-sm layui-btn-green',
+                url: 'member.member/add',
+                icon: 'layui-icon layui-icon-add',
+                text: __('Add'),
+                title: __('Add'),
+                node:false,//不使用节点权限
+                // full: 1,
+                width:'800',
+                height:'600',
+                extend:'data-btn=""'
+            },
