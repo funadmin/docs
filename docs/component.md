@@ -352,7 +352,7 @@ form_selectn($name = null,$select=[], $options = [],$attr='',$value=null)
 
 ## form_textarea 文本域
 ~~~
-form_textarea($name=‘’, $option=[], $value=‘’)
+form_textarea($name='', $option=[], $value=‘’)
 ~~~
 
 ## form_upload  上传组件
@@ -378,7 +378,7 @@ form_upload($name=null,$formdata=[],$options=[])
 
 ## form_editor  富文本组件
 ~~~
-form_editor($name='container',$id='container',$type=1,$options=[])
+form_editor($name='container',$type=1,$options=['id'=>'container',])
 ~~~
 
 - `name `富文本名
@@ -470,7 +470,7 @@ form_icon($name=null,$options = [],$value=null)
 
 ## form_city城市选择组件
 ~~~
-form_city($name='cityPicker',$id='cityPicker',$options = [])
+form_city($name='cityPicker',$options = ['id'=>'cityPicker'])
 ~~~
 - `name ` 表单名  默认cityPicker
 - `id ` 表单名  默认cityPicker
@@ -481,20 +481,20 @@ form_city($name='cityPicker',$id='cityPicker',$options = [])
 
 ## form_region区域选择组件
 ~~~
-form_region($name='regionCheck',$id='regionCheck',$options = [])
+form_region($name='regionCheck',$options = ['id'=>'regionCheck'])
 ~~~
 - options 同基础属性
 
 ## form_tags 标签组件
 ~~~
-form_tags($id='tags',$name='',$options = [],$value='')
+form_tags($name='tags',$options = ['id'=>'tags'],$value='')
 
 ~~~
 
 
 ## form_color 颜色选择组件
 ~~~
-form_color($id='iconPicker',$name=null,$options = [],$value='')
+form_color($name='color',$options = ['id'=>'iconPicker'],$value='')
 ~~~
 
 ## form_submitbtn 提交按钮组件
