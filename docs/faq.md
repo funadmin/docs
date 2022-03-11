@@ -37,7 +37,7 @@ location / {
 [filename](powered.md ':include')
 
 ## 如何关闭弹出窗口的按钮 设置extend:"data-btn=''" 即可
-
+```
 add_full:{
                 type: 'open',
                 class: 'layui-btn-sm layui-btn-green',
@@ -51,3 +51,4 @@ add_full:{
                 height:'600',
                 extend:'data-btn=""'
             },
+```
