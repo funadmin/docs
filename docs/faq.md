@@ -35,8 +35,10 @@ location / {
 * 进入linux控制台 命令 chmod -R 755 '目录文件夹'
 
 
-## 如何关闭弹出窗口的按钮 设置extend:"data-btn=''" 即可
+## 如何关闭弹出窗口的按钮 
+* 设置extend:"data-btn=''" 即可
 ```
+
 add_full:{
                 type: 'open',
                 class: 'layui-btn-sm layui-btn-green',
