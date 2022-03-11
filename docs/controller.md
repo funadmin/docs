@@ -91,6 +91,9 @@ protected $layout = 'layout/main';
  */
 protected $searchFields = 'id';
 
+/**
+ 设置允许修改的字段
+*/
 protected $allowModifyFileds = [
     'status',
     'sort',
@@ -101,12 +104,20 @@ protected $allowModifyFileds = [
  * 是否是关联查询
  */
 protected $relationSearch = false;
+
 ~~~
 ## 关联查询
 > 在控制器设置 $relationSearch 即可
 ~~~
 protected $relationSearch = true;
 ~~~
+
+/**
+ * 关联join搜索
+ * @var array
+ */
+  protected $joinSearch = [];
+
 
 我们需要修改控制器的`index`方法，代码如下：
 
