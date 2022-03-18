@@ -7,6 +7,7 @@
 * [开发示例](demo.md)
 * [CURD](curd.md)
 * [前端](frontend)
+* [表格搜索](table)
 * [表单组件](component.md)
 * [API](api.md)
 * [插件](addon.md)

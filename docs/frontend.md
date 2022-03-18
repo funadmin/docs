@@ -147,8 +147,10 @@ define(['jquery','table','form'], function ($,Table,Form) {
 
 ## cols参数
 * cols字段属性列表
+- class: class 类属性
 - field：对应返回的数据列
-- url 当需要远程获取的数据时 用于模板  select tags  selects 邓
+- filter filter属性
+- url 当需要远程获取的数据时 用于模板  select tags  selects 等
 - title：表格标题
 - align：对齐方式
 - sort：是否排序字段，默认值不显示排序按钮
@@ -169,6 +171,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - timepickerformat    timepicker 搜索表单日期范围格式  默认 `YYYY-MM-DD HH:mm:ss`
 - searchdateformat  搜索表单日期格式   默认 `yyyy-MM-dd HH:mm:ss`
 - dateformat 日期值格式化   默认 `yyyy-MM-dd HH:mm:ss`
+- extend 扩展属性
 
 
 -    默认  比如 ：
