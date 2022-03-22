@@ -56,4 +56,26 @@ add_full:{
 
 
 
+## composer 安装错误
+
+```
+    composer依赖包安装中出现这个错误：
+
+  ![V}B811)3N PT7G5D2AJH61P](https://user-images.githubusercontent.com/65004113/159422012-4dcb98be-dc92-4d17-8eee-3c3071254184.png)
+
+
+    解决：
+    先查看包来源地址，查询命令： composer config -l -g
+    
+    执行命令： composer config -g repo.packagist composer https://packagist.org
+    
+    而后composer install完美成功。
+    
+    也可以尝试使用阿里云的源，并对composer进行升级
+    
+    composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+    
+    composer selfupdate
+```
+
 [filename](powered.md ':include')
