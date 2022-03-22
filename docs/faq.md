@@ -54,12 +54,11 @@ add_full:{
             },
 ```
 
+##  composer 安装错误
 
-
-## composer 安装错误
-
-```
-    composer依赖包安装中出现这个错误：
+ * composer依赖包安装中出现这个错误：
+ ```
+  
             H:\phpstudy_pro\www\funadminv23>composer update
 
             Warning: Module "openssl" is already loaded in Unknown on line 0
