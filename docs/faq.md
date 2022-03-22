@@ -60,9 +60,17 @@ add_full:{
 
 ```
     composer依赖包安装中出现这个错误：
+            H:\phpstudy_pro\www\funadminv23>composer update
 
-  ![V}B811)3N PT7G5D2AJH61P](https://user-images.githubusercontent.com/65004113/159422012-4dcb98be-dc92-4d17-8eee-3c3071254184.png)
+            Warning: Module "openssl" is already loaded in Unknown on line 0
+            Loading composer repositories with package information
+            Updating dependencies
+            Your requirements could not be resolved to an installable set of packages.
 
+              Problem 1
+                - Root composer.json requires funadmin/fun-addons ^v4.0, found funadmin/fun-addons[dev-master, v1.0, ..., v1.60, v2.0, ..., v2.8.3, v3.0, ..., v3.5.0]              but it does not match the constraint.
+
+                        
 
     解决：
     先查看包来源地址，查询命令： composer config -l -g
