@@ -7,7 +7,8 @@
 * CURL PHP Extension
 * Fileinfo PHP Extension
 * 伪静态配置
-* 启用函数 putenv 安装composer 扩展时用到
+* 启用函数 `putenv` `proc_open` 安装composer 扩展时用到 
+* 如果是宝塔安装注意权限的问题，否则会提示权限不足
 
 ## 命令行安装
 * 通过 Composer 创建项目建议
