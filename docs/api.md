@@ -158,15 +158,15 @@ return [
     'authentication'=>"authenticationValue"
 ];
 ```
-     在进行api请求时，header部分提交authenticationValue的值为:uid 鉴权加密字符串，即可，注意中间是空格，uid为登陆用户id。
+     在进行api请求时，header部分提交authenticationValue的值为:member_id 鉴权加密字符串，即可，注意中间是空格，member_id为登陆用户id。
 
 > 2 、生成authentication
 
 将获取的access-token  ，使用以下格式 
 
-`appid:access-token:uid`
+`appid:access-token:member_id`
 
-进行base64 生成密文，组成:`uid 密文`，用户api请求 ;注意中间有个空格，uid 登陆用户的id 
+进行base64 生成密文，组成:`member_id 密文`，用户api请求 ;注意中间有个空格，member_id 登陆用户的id 
 
 通过上面的操作 即可以使用接口获取你想要的数据了，
 
@@ -179,7 +179,7 @@ $noAuth = [‘user’]
 
 ### 四、Api请求
 
-对以上生成的鉴权密文，在头部header设置authentication关键字的值为 `uid base64密文` 即可进行api请求，如没有设置关键字，默认为authentication
+对以上生成的鉴权密文，在头部header设置authentication关键字的值为 `member_id base64密文` 即可进行api请求，如没有设置关键字，默认为authentication
 
 ![](images/image-20210419140002052.png)
 
