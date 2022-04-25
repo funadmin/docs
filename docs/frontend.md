@@ -22,7 +22,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
                     add_full:{
                         type: 'open',//打开弹窗
                         class: 'layui-btn-sm layui-btn-green',//样式，见layui
-                        url: 'member.member/add', 
+                        url: 'member.member/add' +location.search,  // 获取当前url?后面的数据 
                         icon: 'layui-icon layui-icon-add',//图标，见layuiicon
                         text: __('Add'),
                         title: __('Add'),//标题及按钮文字
