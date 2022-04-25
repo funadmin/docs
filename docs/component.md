@@ -12,7 +12,7 @@
     {:form_select('name',$selectList,['verify'=>'required','label'=>'name','multiple'=>1] ,'id,name')}
     {:form_selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
     {:form_radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
-    {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+    {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
     {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
     {:form_date($name=null,$options = [],$value='')}
     {:form_city($name='cityPicker',$options = ['id'=>'cityPicker'])}
