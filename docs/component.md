@@ -3,8 +3,16 @@
   ```
     {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
     {:form_input('mobile','text',['verify'=>'phone'])}
+    {:form_text('text',['verify'=>''])}
+    {:form_tel('mobile')}
+    {:form_number('number')}
+    {:form_url('url')}
+    {:form_email('email')}
+    {:form_hidden('hidden')}
+    {:form_range('range')}
+    {:form_password('password')}
+
     {:form_upload('avatar',$formData,['cropper'=>1])}
-    {:form_input('email','text',['verify'=>'email'])}
     {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
     {:form_checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
     {:form_arrays('name',$arrList,['verify'=>'required','label'=>'name'])}
