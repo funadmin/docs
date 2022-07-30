@@ -41,7 +41,7 @@
 
 | 参数           | 说明                         | 默认            |
 | -------------- | ---------------------------- | --------------- |
-| authentication | 配置中authentication头部参数 | 上面获取的token |
+| Authorization | 配置中authentication头部参数 | 上面获取的token |
 | 其他           | 其他post或者get参数          | -               |
 
 
@@ -70,12 +70,12 @@
 -    表名: <表前缀>_oatuh2_client
      ![](images/image-20210419120801324.png)
 
-> 1、每个记录对应一个api应用，关键字段appid、appsecret对应应用ID，应用密钥，两者用于后面签名加密生成authentication使用。
+> 1、每个记录对应一个api应用，关键字段appid、appsecret对应应用ID，应用密钥，两者用于后面签名加密生成Authorization使用。
 
 > 2、目前api的设置暂未有入口，可自行在后台编写配置操作的界面。
 
 ### 二 、access-token 获取
->  1、生成authentication前需要获取access-token，获取access-token方法在Token控制器父类fun\auth\Token中的accessToken方法
+>  1、生成Authorization前需要获取access-token，获取access-token方法在Token控制器父类fun\auth\Token中的accessToken方法
 
 [comment]: <> "![]&#40;images/screenshot_1621329748530.png&#41;"
 
@@ -150,15 +150,15 @@ sign = strtolower(md5(urldecode(http_build_query($params))));
 
 ### 三、authentication的生成
 
-> 1、在进行api请求时，需要先生成authentication用于api请求，authentication鉴权的关键字可以自定义，在api应用下的config文件夹内定义authentication即可   
+> 1、在进行api请求时，需要先生成Authorization用于api请求，Authorization鉴权的关键字可以自定义，在api应用下的config文件夹内定义Authorization即可   
 
 ```php
 <?php
 return [
-    'authentication'=>"authenticationValue"
+    'authentication'=>"Authorization"
 ];
 ```
-     在进行api请求时，header部分提交authenticationValue的值为:member_id 鉴权加密字符串，即可，注意中间是空格，member_id为登陆用户id。
+     在进行api请求时，header部分提交Authorization Value的值为:member_id 鉴权加密字符串，即可，注意中间是空格，member_id为登陆用户id。
 
 > 2 、生成authentication
 
@@ -179,7 +179,7 @@ $noAuth = [‘user’]
 
 ### 四、Api请求
 
-对以上生成的鉴权密文，在头部header设置authentication关键字的值为 `member_id base64密文` 即可进行api请求，如没有设置关键字，默认为authentication
+对以上生成的鉴权密文，在头部header设置Authorization关键字的值为 `member_id base64密文` 即可进行api请求，如没有设置关键字，默认为Authorization
 
 ![](images/image-20210419140002052.png)
 
