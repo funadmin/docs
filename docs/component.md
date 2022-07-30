@@ -4,13 +4,15 @@
     {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
     {:form_input('mobile','text',['verify'=>'phone'])}
     {:form_text('text',['verify'=>''])}
-    {:form_tel('mobile')}
+    {:form_tel('mobile')}  
     {:form_number('number')}
     {:form_url('url')}
     {:form_email('email')}
     {:form_hidden('hidden')}
     {:form_range('range')}
     {:form_password('password')}
+    
+    {:Form::selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
 
     {:form_upload('avatar',$formData,['cropper'=>1])}
     {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
