@@ -141,6 +141,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
        // full: 1, //是否全屏打开 默认没有
         width:800,//宽
         height:800// 高
+        node:true, 是否验证节点。默认为true
         extend:    扩展参数 一般为 字符串 或者json 
 ~~~
 
