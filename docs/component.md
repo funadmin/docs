@@ -1,40 +1,79 @@
 ## 强大的表单组件助您快速开发,curd 可以自动生成表单组件
   
-  ```
-    {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
-    {:form_input('mobile','text',['verify'=>'phone'])}
-    {:form_text('text',['verify'=>''])}
-    {:form_tel('mobile')}  
-    {:form_number('number')}
-    {:form_url('url')}
-    {:form_email('email')}
-    {:form_hidden('hidden')}
-    {:form_range('range')}
-    {:form_password('password')}
-    
-    {:Form::selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
+  ``` 
+  {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
+  {:form_input('mobile','text',['verify'=>'phone'])}
+  {:form_text('text',['verify'=>''])}
+  {:form_tel('mobile')}  
+  {:form_number('number')}
+  {:form_url('url')}
+  {:form_email('email')}
+  {:form_hidden('hidden')}
+  {:form_range('range')}
+  {:form_password('password')}
+  
+  {:form_selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
 
-    {:form_upload('avatar',$formData,['cropper'=>1])}
-    {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
-    {:form_checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
-    {:form_arrays('name',$arrList,['verify'=>'required','label'=>'name'])}
-    {:form_textarea('name',['verify'=>'required','label'=>'name'])}
-    {:form_select('name',$selectList,['verify'=>'required','label'=>'name','multiple'=>1] ,'id,name')}
-    {:form_selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
-    {:form_radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
-    {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
-    {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
-    {:form_date($name=null,$options = [],$value='')}
-    {:form_city($name='cityPicker',$options = ['id'=>'cityPicker'])}
-    {:form_region($name='regionCheck',$options = ['id'=>'regionCheck'])}
-    {:form_tags($name='',$options = [id'=>'tags'],$value='')}
-    {:form_color($name=null,$options = ['id'=>'color'],$value='')}
-    {:form_rate($name,$options = ['id'=>'rate'],$value='')}
-    {:form_slider($name,$options = ['id'=>'slider'],$value='')}
-    {:form_upload($name=null,$formdata=[],$options=[],$value='')}
-    {:form_editor($name='container',$type=1,$options=['id'=>'container'],$value='')}
-    {:form_submitbtn()}
-    {:form_closebtn($reset = true, $options=[])}
+  {:form_upload('avatar',$formData,['cropper'=>1])}
+  {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+  {:form_checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+  {:form_arrays('name',$arrList,['verify'=>'required','label'=>'name'])}
+  {:form_textarea('name',['verify'=>'required','label'=>'name'])}
+  {:form_select('name',$selectList,['verify'=>'required','label'=>'name','multiple'=>1] ,'id,name')}
+  {:form_selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
+  {:form_radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
+  {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:form_date($name=null,$options = [],$value='')}
+  {:form_city($name='cityPicker',$options = ['id'=>'cityPicker'])}
+  {:form_region($name='regionCheck',$options = ['id'=>'regionCheck'])}
+  {:form_tags($name='',$options = [id'=>'tags'],$value='')}
+  {:form_color($name=null,$options = ['id'=>'color'],$value='')}
+  {:form_rate($name,$options = ['id'=>'rate'],$value='')}
+  {:form_slider($name,$options = ['id'=>'slider'],$value='')}
+  {:form_upload($name=null,$formdata=[],$options=[],$value='')}
+  {:form_editor($name='container',$type=1,$options=['id'=>'container'],$value='')}
+  {:form_submitbtn()}
+  {:form_closebtn($reset = true, $options=[])}
+
+  ```
+  ### Form 表单使用方式同上
+  
+  ``` 
+  {:Form::input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
+  {:Form::input('mobile','text',['verify'=>'phone'])}
+  {:Form::text('text',['verify'=>''])}
+  {:Form::tel('mobile')}  
+  {:Form::number('number')}
+  {:Form::url('url')}
+  {:Form::email('email')}
+  {:Form::hidden('hidden')}
+  {:Form::range('range')}
+  {:Form::password('password')}
+  
+  {:Form::selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
+  {:Form::upload('avatar',$formData,['cropper'=>1])}
+  {:Form::switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+  {:Form::checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
+  {:Form::arrays('name',$arrList,['verify'=>'required','label'=>'name'])}
+  {:Form::textarea('name',['verify'=>'required','label'=>'name'])}
+  {:Form::select('name',$selectList,['verify'=>'required','label'=>'name','multiple'=>1] ,'id,name')}
+  {:Form::selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
+  {:Form::radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:Form::selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
+  {:Form::xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:Form::date($name=null,$options = [],$value='')}
+  {:Form::city($name='cityPicker',$options = ['id'=>'cityPicker'])}
+  {:Form::region($name='regionCheck',$options = ['id'=>'regionCheck'])}
+  {:Form::tags($name='',$options = [id'=>'tags'],$value='')}
+  {:Form::color($name=null,$options = ['id'=>'color'],$value='')}
+  {:Form::rate($name,$options = ['id'=>'rate'],$value='')}
+  {:Form::slider($name,$options = ['id'=>'slider'],$value='')}
+  {:Form::upload($name=null,$formdata=[],$options=[],$value='')}
+  {:Form::editor($name='container',$type=1,$options=['id'=>'container'],$value='')}
+  {:Form::submitbtn()}
+  {:Form::closebtn($reset = true, $options=[])}
+
   ```
  
  - 基本覆盖了业务所需的常用的组件，如有好的组件可以联系作者增加
