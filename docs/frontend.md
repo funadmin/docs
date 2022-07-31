@@ -106,8 +106,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
                 limit: 15,  //默认行数
                 page: true, //开启多页
             });
-            let table = $('#'+Table.init.table_elem);
-            Table.api.bindEvent(table);
+            Table.api.bindEvent(Table.init);
         },
         add:function () {
             Controller.api.bindevent()
@@ -151,6 +150,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - field：对应返回的数据列
 - filter filter属性
 - url 当需要远程获取的数据时 用于模板  select tags  selects 等
+- saveurl 当需要保存到后端时的url  selects  switch 等
 - title：表格标题
 - align：对齐方式
 - sort：是否排序字段，默认值不显示排序按钮
@@ -158,11 +158,11 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - minWidth：列最小宽度，设置width后不生效
 - selectList：搜索表单里面的下拉选项
 - tips：开关字段显示的文本，格式：tips:__('Enabled')+'|'+__('Disabled')
-- edit：编辑字段，修改需要再后台接收此字段更新
+- edit：编辑字段，修改需要再后台接收此字段更新 
 - totalRowText：开启汇总属性后的汇总行文本
 - totalRow：是否开启该列的自动合计功能，默认：false
 - fixed：固定列，可选值有：*left*、*right*，该列必须设置在最左（left）、最右(right)
-- search：搜索表单字段的格式：`between：区间搜索、not between：不在区间内、timerage： 时间范围、select：下拉框、range：普通时间范围、time：日期时间，不显示在搜索表单直接设置 **search:false,**`
+- search：搜索表单字段的格式：`between：区间搜索、not between：不在区间内、timerage： 时间范围、select：下拉框,xmSelect 、range：普通时间范围、time：日期时间，不显示在搜索表单直接设置 **search:false,**`
 - templet：模板解析，见JS 模板 - 模板解析
 - operat：操作选项，模板解析为：templet: Table.templet.operat 时生效
 - searchOp 设置搜索条件  默认`%*%`   
@@ -220,9 +220,10 @@ define(['jquery','table','form'], function ($,Table,Form) {
 
 ## 模板解析
 - `Table.templet.resolution`  //解析关联模型字段
-- `Table.templet.image`     //单图片
-- `Table.templet.images`  //多图片
+- `Table.templet.image`     //图片/多图片
 - `Table.templet.content`  内容
+- `Table.templet.content`  text
+- `Table.templet.number`  number
 - `Table.templet.icon`  图标
 - `Table.templet.url`  url地址
 - `Table.templet.switch` 开关
@@ -231,6 +232,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - `Table.templet.select`  select
 - `Table.templet.selects`  select下拉框
 - `Table.templet.tags`  tag
+- `Table.templet.dropdown`  dropdown
 
 
 格式样板：
@@ -295,7 +297,9 @@ title="添加"><i class="layui-icon layui-icon-add"></i>添加</button >
 - destroy 删除
 - request 请求
 - refresh  刷新
+- export 导出
 - iframe   v1.2.3 新增  打开新的iframe
+- dropdown   v2.6 新增  dropdown
 > 示例
 ~~~
 add_full:{
