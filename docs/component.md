@@ -23,7 +23,7 @@
   {:form_selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
   {:form_radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
   {:form_selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
-  {:form_xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:form_xmselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
   {:form_date($name=null,$options = [],$value='')}
   {:form_city($name='cityPicker',$options = ['id'=>'cityPicker'])}
   {:form_region($name='regionCheck',$options = ['id'=>'regionCheck'])}
@@ -61,7 +61,7 @@
   {:Form::selectn('city_ids',[],['url'=>__u('member.member/getgroup'),'multiple'=>1,'verify'=>'required'],'id,title',$formData?$formData['city_ids']:'')}
   {:Form::radio('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
   {:Form::selectplus('sex',['Secrecy','Man','Female'],['filter'=>'sex'],$attr=[],1)}
-  {:Form::xselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
+  {:Form::xmselect('sex',['Secrecy','Man','Female'],['filter'=>'sex'],1)}
   {:Form::date($name=null,$options = [],$value='')}
   {:Form::city($name='cityPicker',$options = ['id'=>'cityPicker'])}
   {:Form::region($name='regionCheck',$options = ['id'=>'regionCheck'])}
