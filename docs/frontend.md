@@ -1,7 +1,9 @@
 ## 前端js模板
 
-- js 默认是开发模式 
-- 如果需要关闭开发模式 ；可以在后台配置中设置 app_debug 为0 
+- js 默认是生产模式 如果需要打开  
+- 如果需要开启开发模式 ；可以在后台配置中设置 app_debug 为 1 
+- 生产模式系統后台的js默认加载的是 require-backend.min.js  前台的是 require-frontend.min.js  （require-table.js fun.js require-form.js require-fu.js require-upload.js ）这些js 已经压缩到min.js 中了，从而减少系统压力
+- 开发模式后台默认加载的是 require-backend.js 其中这个js会自动加载 譬如require-table.js fun.js require-form.js require-fu.js require-upload.js 等
 - 打包js 进入static 目录 并使用node r.js -o backend-build.js 命令打包后端js 加快浏览速度
 - node r.js -o frontend-build.js 打包前台js
 ~~~
