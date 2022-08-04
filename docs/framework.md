@@ -27,6 +27,10 @@ FunAdmin项目目录
 │   │   ├── service          //api服务类目录
 │   │   ├── traits           //apitrait目录
 │   │   ├── view             //api视图目录
+│   ├── install                //安装模块
+│   │   ├── controller       //install控制器目录
+│   │   ├── view             //install视图目录
+
 │   ├── common                //通用应用模块
 │   ├── BaseController.php    //控制器基础类
 │   ├── common.php            //应用公共文件
@@ -38,8 +42,6 @@ FunAdmin项目目录
 ├── config                     //配置项目录
 ├── extend                        //其他扩展目录  
 ├── public
-│   ├── install           //安装静态资源目录  
-│   │   ├──css           //后台静态资源
 │   ├── static
 │   │   ├── backend           //后台静态资源
 │   │   │    ├── css        //后台自义定CSS
