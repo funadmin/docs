@@ -39,6 +39,7 @@
   ```
   ## Form表单
     - 使用方式同上
+  
   ``` 
   {:Form::input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
   {:Form::input('mobile','text',['verify'=>'phone'])}
@@ -50,7 +51,6 @@
   {:Form::hidden('hidden')}
   {:Form::range('range')}
   {:Form::password('password')}
-  
   {:Form::selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
   {:Form::upload('avatar',$formData,['cropper'=>1])}
   {:Form::switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
@@ -92,6 +92,8 @@
 - $value  表单值
 - $select  下拉框的选项
 - $attr  下拉框所需属性 比如 `id,title` 表示值为id 显示的文本为title
+  
+
 ## form_input输入框
 
 ~~~
