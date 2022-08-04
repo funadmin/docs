@@ -1,4 +1,4 @@
-## 插件目录结构
+## 插件结构
 ~~~
 demo  //插件标识
 ├── frontend //此文件夹为插件前台控制器目录
@@ -110,7 +110,11 @@ class Plugin extends Addons    // 需继承fun\Addon类
 }
 ~~~
 
+## 插件钩子
 
+    -  默认的事件有 `AddonsInit` 加载插件时会默认加载此函数钩子
+    -  除了 install uninstall disabled enabled方法  和上面的默认钩子，其他的均为钩子函数
+    -  钩子函数可以在任何地方使用 hook('demo',$params = []);
 
 ## 插件配置
 > config.php`需要返回一个多维数组，例如：
@@ -173,14 +177,65 @@ thumb =  //插件缩略图
 publish_time = 2021-03-18  // 发布时间
 ~~~
 
+## 插件JS
+    - 当需要使用额外的js時候，可以写 ` plugin.js `
+   - 插件js 主要包含两个部分 
+   - 第一部分为加载js css 文件 第二部分编辑你要的js代码
+    ```
+    // 第一部分为
+    require.config({
+        paths: {
+            //其他组件
+            'xxx': 'addons/xxx/plugins/xxx/xxx.min',//JS文件
+        },
+        shim: {
+            'xxx': {
+                    deps: [
+                        'css!/static/addons/ueditor/plugins/ueditor/themes/default/css/ueditor.css',],//依赖Css文件
+                },
+            },
+    });
 
+ // 第二部分为
+    require(['form'], function (Form) {
+    Form.events.bindevent = function (form) {
+        let Editor = {
+            init: {
+              
+                },
+
+            },
+            events: {},
+            api: {
+                xxx: function () {
+                    let editor = document.querySelectorAll('*[lay-filter="editor"]')
+                    if (editor.length > 0) {
+                        require(['xxx'], function (undefined) {
+                                //写你的逻辑
+                        })
+                    }
+                },
+            },
+        };
+        return Editor.api.xxx() //调用代码
+    }
+})
+    ```
+
+    
 ##   内置函数
 
 ###   `addons_url`  插件路由
 - 用于生成插件路由
 - 调用方法
 ~~~
-$url1 = addons_url('demo/frontend/index/index');
+$url = addons_url('demo/frontend/index/index'); 
+~~~
+
+或者在当前插件控制器下面 
+
+~~~
+addons_url('index/index');
 ~~~
 ### `get_addons_list`  获取插件列表
 -  调用方法
