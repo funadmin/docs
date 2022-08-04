@@ -1,5 +1,72 @@
-## 插件安裝失敗
+## 插件安裝失败
 
+- 采用离线安装 
+    - 插件管理 ，离线导入压缩包安装 
+- 采用手动导入
+    - 把压缩文件解压到addons 目录  
+    - 导入install.sql （导入前修改__PREFIX__为表前缀）沒有则无需导入 
+    - Plugin.php 查看是否有除了 `install uninstall disabled enabled addonsInit ` 外的函数 如果有则需把钩子函数加入到 config/addons.php下  示例如下
+    ~~~
+    return array (
+        'autoload' => true,
+        'hooks' => 
+        array (
+            'bbs' => 
+            array (
+                0 => 'bbshook',//这里是hooks钩子
+            ),
+        ),
+        'route' => 
+            array (
+                0 => 
+                array (
+                'addons' => 'bbs',
+                'domain' => 'demobbs',
+                'rule' => 
+                array (
+                    'bbs' => 'bbs/frontend/index/index',
+                    'bbs/i/[:id]/[:type]/[:page]' => 'bbs/frontend/bbs/index',
+                    'bbs/d/[:id]' => 'bbs/frontend/bbs/detail',
+                ),
+            ),
+            'service' =>array (),
+        );
+    ~~~
+
+    - Plugin.php 查看是否有$menu 如果有 那么需要将 菜单加入到数据库内 可以在任何地方执行下面代码 安装菜单 执行后清空缓存
+    ~~~
+        $addonService = app\backend\service\AddonService::instance();
+        $name = '插件名';
+        $class = get_addons_instance($name);
+        // 安装菜单
+        $menu = $class->menu;
+        if(!empty($menu_config)){
+            if(isset($menu_config['is_nav']) && $menu_config['is_nav']==1){
+                $pid = 0;
+            }else{
+                $pid = $addonService->addAddonManager()->id;
+            }
+            $menu[] = $menu_config['menu'];
+            $addonService->addAddonMenu($menu,$pid);
+        }
+    ~~~
+
+    - Plugin.ini 修改install = 1
+    - plugin.js  有这个文件则把文件内容拷贝到require-addons.js 内部
+     
+    ~~~ 
+    define([], function () {  plugin.js内容复制到这里面 }) 
+    ~~~
+    - 在 `fun_addon` 表内插入一行 插件数据即可  示例如下
+    
+    ~~~
+     INSERT INTO `fun_addon` 
+
+     (`id`, `title`, `name`, `images`, `group`, `description`, `author`, `version`, `require`, `website`, `is_hook`, `status`, `create_time`, `update_time`, `delete_time`) 
+     VALUES 
+     (NULL, '社区管理系统', 'bbs', '', '', 'bbs社区管理插件', 'yuege', '1', '1', '', '0', '1', '1616400849', '1650286568', '0')
+    ~~~
+  
  
 ## 插件访问404 
  - 检查伪静态是否配置 必须配置否则访问不了
