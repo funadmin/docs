@@ -30,7 +30,6 @@ FunAdmin项目目录
 │   ├── install                //安装模块
 │   │   ├── controller       //install控制器目录
 │   │   ├── view             //install视图目录
-
 │   ├── common                //通用应用模块
 │   ├── BaseController.php    //控制器基础类
 │   ├── common.php            //应用公共文件
