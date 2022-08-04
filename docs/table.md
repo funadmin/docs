@@ -1,4 +1,4 @@
-## 前端js模板
+## 前端JS模板
 - 增强属性适用于 v2.3及以上
 ~~~
 define(['jquery','table','form','tableFilter'], function ($,Table,Form,tableFilter) {

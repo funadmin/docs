@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FunAdmin开发文档，FunAdmin敏捷中后台管理系统</title>
+    <title>FunAdmin官方开发文档-基于TP6+LAYUI开发的极速开发框架-FunAdmin敏捷中后台管理系统</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="description" content="FunAdmin FunCmf 开源中后台管理系统，适合开发CMS,商城，OMS,CRM,ERP等系统">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -19,12 +19,14 @@
     <a href="https://gitee.com/funadmin/funadmin">gitee</a>
     <a href="https://github.com/funadmin/funadmin">github</a>
     <a href="https://www.funadmin.com">官网</a>
+    <a href="https://www.funadmin.com/plugins">插件</a>
 </nav>
 <div id="app">加载中...</div>
 <script>
     window.$docsify = {
         // 项目名称
-        name: 'FunAdmin',
+        // homepage: 'index.md',
+        name: 'FunAdmin官方文档',
         'logo': '',
         // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
         repo: 'https://github.com/funadmin/funadmin',
@@ -40,6 +42,8 @@
         subMaxLevel: 3,
         auto2top: true,//切换页面后是否自动跳转到页面顶部。
         search: 'auto', // 默认值
+        executeScript: true,
+
         // 完整配置参数
         search: {
             maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -72,10 +76,15 @@
             // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
             // 匹配到的字符串将被用来识别索引
             // pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+            requestHeaders: {
+                'cache-control': 'max-age=600',
+            },
+            mergeNavbar: true,
+
         },
         // ga: 'UA-XXXXX-Y'
     }
-
+    console.log('欢迎使用 FunAdmin开发框架')
 </script>
 <!-- Docsify v4 -->
 <script src="./js/docsify@4.js"></script>
