@@ -1,5 +1,5 @@
-## 强大的表单组件助您快速开发,curd 可以自动生成表单组件
-  
+## 表单组件
+  - 强大的表单组件助您快速开发,curd 可以自动生成表单组件
   ``` 
   {:form_input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
   {:form_input('mobile','text',['verify'=>'phone'])}
@@ -37,8 +37,8 @@
   {:form_closebtn($reset = true, $options=[])}
 
   ```
-  ### Form 表单使用方式同上
-  
+  ## Form表单
+    - 使用方式同上
   ``` 
   {:Form::input('username','text',['verify'=>'required','tips'=>'Between 4 and 25 characters.'])}
   {:Form::input('mobile','text',['verify'=>'phone'])}
@@ -78,7 +78,7 @@
  
  - 基本覆盖了业务所需的常用的组件，如有好的组件可以联系作者增加
  
-### 基础属性
+## 基础属性
 - $name 表单 input | textarea | radio | checkbox 或其他表单的名字
 - $options 表单一些基础属性 ，
   - class  css  class类属性
