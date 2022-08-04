@@ -1,11 +1,14 @@
+## 插件安裝失敗
+
+ 
 ## 插件访问404 
- 1、检查伪静态是否配置 必须配置否则访问不了
+ - 检查伪静态是否配置 必须配置否则访问不了
 
 ## 访问速度太慢
 
-1、关闭开发模式 ；可以在后台配置中设置 app_debug 为0
+ - 关闭开发模式 ；可以在后台配置中设置 app_debug 为0
 
-2、打包js 进入static 目录  需要安装node
+ - 打包js 进入static 目录  需要安装node
 并使用
 ```
 node r.js -o backend-build.js
@@ -86,6 +89,7 @@ add_full:{
     composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
     
     composer selfupdate
-```
+
+
 
 [filename](powered.md ':include')

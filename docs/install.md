@@ -12,7 +12,7 @@
 * CURL PHP Extension
 * Fileinfo PHP Extension
 * 伪静态配置 
-* 设置目录权限755
+* 设置目录权限 755
 * 启用函数 `putenv` `proc_open` 安装composer 扩展时用到 
 * 如果是宝塔安装注意权限的问题，否则会提示权限不足
   
@@ -78,6 +78,16 @@
 
 
 ## 伪静态配置
+* Nginx
+    * 修改nginx.conf 配置文件 加入下面的语句
+    ~~~
+  location / {
+	if (!-e $request_filename){
+		rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+	}
+    }
+    ~~~
+
 * Apache
     * 把下面的内容保存为`.htaccess`文件放到应用入口`public`文件的同级目录下
     ~~~
@@ -115,18 +125,10 @@
         Require all granted
     </Directory>
 </VirtualHost>
-* Nginx
-    * 修改nginx.conf 配置文件 加入下面的语句
-    ~~~
-  location / {
-	if (!-e $request_filename){
-		rewrite  ^(.*)$  /index.php?s=$1  last;   break;
-	}
-    }
-    ~~~
+
 ## 常见问题
 *  如果提示`当前权限不足，无法写入配置文件config/database.php`，请检查`database.php`是否可读，还有可能是当前安装程序无法访问父目录，请检查PHP的`open_basedir`配置
-*   如果`composer install`失败，请尝试在命令行进行切换配置到国内源，命令如下`composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/`
+*  如果`composer install`失败，请尝试在命令行进行切换配置到国内源，命令如下`composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/`
 *  如果使用的宝塔面板，请在软件配置中PHP的禁用函数中，移除`putenv`函数
 
 遇到问题到[社区](https://bbs.funadmin.com/)或QQ群：[775616363](https://jq.qq.com/?_wv=1027&k=RAvbwgRY)反馈
