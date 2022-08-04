@@ -1,19 +1,32 @@
+## 支持 
+   - star地址 [https://gitee.com/funadmin/funadmin](https://gitee.com/funadmin/funadmin) 
+  
 ![1657592404491](https://user-images.githubusercontent.com/65004113/178394603-1956dd0b-6632-4487-a455-00126dda4011.jpg)
 
 ## 环境要求
 * PHP >= 7.4.0  建议7.4或8.X
 * Mysql >= 5.7  建议8.0及以上
-*  Nginx  或 Apache 建议Nginx
+* Nginx  或 Apache 建议Nginx
 * PDO PHP Extension
 * MBstring PHP Extension
 * CURL PHP Extension
 * Fileinfo PHP Extension
-* 伪静态配置
+* 伪静态配置 
+* 设置目录权限755
 * 启用函数 `putenv` `proc_open` 安装composer 扩展时用到 
 * 如果是宝塔安装注意权限的问题，否则会提示权限不足
+  
+
+## 官网下载
+  * 通过官网下载完整包，进行安装
+    * [https://www.funadmin.com/frontend/version/index.html](https://www.funadmin.com/frontend/version/index.html)
+    *  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
+    *  修改伪静态配置, 请参考下方伪静态设置
+    * 执行命令  ```php think install``` 安装数据库 
+
 
 ## 命令行安装
-* 通过 Composer 创建项目建议
+  * 通过 Composer 创建项目建议
 	* ```composer create-project --prefer-dist funadmin/funadmin funadmin```
 	* ``` cd funadmin &&  composer install  ```
 	*  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
