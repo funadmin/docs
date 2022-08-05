@@ -22,7 +22,10 @@
     * [https://www.funadmin.com/frontend/version/index.html](https://www.funadmin.com/frontend/version/index.html)
     *  将网站入口部署至`public`目录下面（即`funadmin/public`目录下）
     *  修改伪静态配置, 请参考下方伪静态设置
-    * 执行命令  ```php think install``` 安装数据库 
+	*  访问[http://www.yoursite.com/install.php](http://www.yoursite.com/install.php)进行安装 www.yousite.com 为你配置的域名
+	*  根据图形界面直接安装即可
+	*  安装完成后会自动生成安装锁`public/install.lock`, 如需重新安装, 删掉该文件即可。
+
 
 
 ## 命令行安装
