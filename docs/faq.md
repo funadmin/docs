@@ -8,35 +8,34 @@
 ~~~
 
 ## 如何在HTML 页面中写JS 
-- 直接在页面中使用 原生的layui 下面语句即可 ,下面是一个颜色选择器的示例
+
+- 直接在页面中使用 原生的layui 下面语句即可 ,下面是一个图标选择器的示例
 ~~~
-{:form_color('color')}
+{:form_icon('icon')}
 <script>
     layui.extend({
         iconPicker:'/static/plugins/lay-module/iconPicker/iconPicker'
     }).use(['layer', 'iconPicker'], function(){
-        var list = $("*[lay-filter='colorPicker']");
+        var list = $("*[lay-filter='iconPickers']");
         if (list.length > 0) {
             layui.each(list, function() {
-                var _that = $(this),name= _that.data('name'),format = _that.data('format') || 'hex';
+                var _that = $(this);
                 var id = _that.prop('id');
-                var color = _that.prev('input').val();
-                layui.colorpicker.render({
+                layui.iconPicker.render({
                     elem: '#' + id,
-                    color: color,
-                    predefine: true,
-                    alpha: true,
-                    format:format,
-                    change: function(color) {},
-                    done: function(color) {
-                        _that.prev('input[name="' + name + '"]').val(color)
-                    }
+                    type: 'fontClass',
+                    search: true,
+                    page: true,
+                    limit: 12,
+                    click: function(data) {
+                        _that.prev("input[type='hidden']").val(data.icon)
+                    },
+                    success: function(d) {}
                 })
             })
         }
     });
 </script>
-
 ~~~
 ## 插件安裝失败
 
