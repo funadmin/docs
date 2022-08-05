@@ -1,3 +1,11 @@
+##  如何在页面引入JS CSS
+    - 当你需要使用第三方css  js 的時候，你可以在当前页面使用script 和link引入  js ,css
+  
+    ~~~
+        <link href="xxx.css" />
+        <script src="xxx.js"></script>
+    ~~~
+
 ## 插件安裝失败
 
 - 采用离线安装 

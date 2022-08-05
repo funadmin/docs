@@ -6,7 +6,8 @@
 - 开发模式后台默认加载的是 `require-backend.js` 其中这个js会自动加载 譬如 `require-table.js ,fun.js ,require-form.js ,require-fu.js, require-upload.js` 等
 - 打包js 进入static 目录 并使用 `node r.js -o backend-build.js `命令打包后端js 加快浏览速度
 - node r.js -o frontend-build.js 打包前台js
-- 
+
+ -  
 ~~~
 define(['jquery','table','form'], function ($,Table,Form) {
     let Controller = {
