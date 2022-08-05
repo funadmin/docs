@@ -1,11 +1,43 @@
 ##  如何在页面引入JS CSS
-    - 当你需要使用第三方css  js 的時候，你可以在当前页面使用script 和link引入  js ,css
-  
-    ~~~
-        <link href="xxx.css" />
-        <script src="xxx.js"></script>
-    ~~~
 
+- 当你需要使用第三方css  js 的時候，你可以在当前页面使用script 和link引入  js ,css
+
+~~~
+    <link href="xxx.css" />
+    <script src="xxx.js"></script>
+~~~
+
+## 如何在HTML 页面中写JS 
+- 直接在页面中使用 原生的layui 下面语句即可 ,下面是一个颜色选择器的示例
+~~~
+{:form_color('color')}
+<script>
+    layui.extend({
+        iconPicker:'/static/plugins/lay-module/iconPicker/iconPicker'
+    }).use(['layer', 'iconPicker'], function(){
+        var list = $("*[lay-filter='colorPicker']");
+        if (list.length > 0) {
+            layui.each(list, function() {
+                var _that = $(this),name= _that.data('name'),format = _that.data('format') || 'hex';
+                var id = _that.prop('id');
+                var color = _that.prev('input').val();
+                layui.colorpicker.render({
+                    elem: '#' + id,
+                    color: color,
+                    predefine: true,
+                    alpha: true,
+                    format:format,
+                    change: function(color) {},
+                    done: function(color) {
+                        _that.prev('input[name="' + name + '"]').val(color)
+                    }
+                })
+            })
+        }
+    });
+</script>
+
+~~~
 ## 插件安裝失败
 
 - 采用离线安装 
