@@ -419,7 +419,7 @@ form_upload($name=null,$formdata=[],$options=[])
     - `path`  上传路径
     - `cropper` 开启裁剪功能
         - `width` ,`height`裁剪宽高
-        - `mark` 是否有面罩
+        - `mark` 选取比例 默认 1/1  ;  比如 0.5
         - `area` 裁剪区域大小
     - `exts` 文件后缀
     - `size` 最大文件大小
