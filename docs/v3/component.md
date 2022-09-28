@@ -13,7 +13,8 @@
   {:form_password('password')}
   
   {:form_selectpage('list_id',$list = [],['url'=>'member.member/index','field'=>'username','multiple'=>true,'verify'=>'required'],$value)} 
-
+   文档地址 https://terryz.gitee.io/selectpage/docs.html
+   
   {:form_upload('avatar',$formData,['cropper'=>1])}
   {:form_switch('name',$switchList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
   {:form_checkbox('name',$checkboxList,['verify'=>'required','label'=>'name','multiple'=>1],1)}
