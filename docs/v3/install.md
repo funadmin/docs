@@ -1,6 +1,7 @@
 ## 支持 
    - star地址 [https://gitee.com/funadmin/funadmin](https://gitee.com/funadmin/funadmin) 
-  
+   - star地址 [https://github.com/funadmin/funadmin](https://github.com/funadmin/funadmin) 
+
 ![1657592404491](https://user-images.githubusercontent.com/65004113/178394603-1956dd0b-6632-4487-a455-00126dda4011.jpg)
 
 ## 环境要求
