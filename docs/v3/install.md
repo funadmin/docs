@@ -5,7 +5,7 @@
 ![1657592404491](https://user-images.githubusercontent.com/65004113/178394603-1956dd0b-6632-4487-a455-00126dda4011.jpg)
 
 ## 环境要求
-* PHP >= 7.4.0  建议7.4或8.0
+* PHP >= 7.4.0  建议7.4或8.0  注意8.1暂不推荐使用 
 * Mysql >= 5.7  建议8.0及以上
 * Nginx  或 Apache 建议Nginx
 * PDO PHP Extension
