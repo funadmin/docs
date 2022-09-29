@@ -163,10 +163,11 @@ description = 阿里云短信插件-FunAdmin插件 //简介
 status = 1  //状态
 install = 0  //是否安装
 author = yuege  //作者
-requires = 1  //需要的框架版本
-version = 1  //插件般般
+requires = 3.0  //需要的框架版本
+version = 1.0  //插件般般
 website =   //插件演示地址
 thumb =  //插件缩略图
+url = // 前台地址
 publish_time = 2021-03-18  // 发布时间
 vendor = 1 //vendor自动加载
 ~~~
