@@ -168,7 +168,7 @@ version = 1  //插件般般
 website =   //插件演示地址
 thumb =  //插件缩略图
 publish_time = 2021-03-18  // 发布时间
-vendor = 1 //自动加载
+vendor = 1 //vendor自动加载
 ~~~
 
 ## 插件JS
