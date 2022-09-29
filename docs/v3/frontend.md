@@ -227,17 +227,18 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - `Table.templet.resolution`  //解析关联模型字段
 - `Table.templet.image`     //图片/多图片
 - `Table.templet.content`  内容
-- `Table.templet.content`  text
+- `Table.templet.text`  text
 - `Table.templet.number`  number
 - `Table.templet.icon`  图标
 - `Table.templet.url`  url地址
 - `Table.templet.switch` 开关
 - `Table.templet.operat`  操作方法
 - `Table.templet.time`  操作方法
-- `Table.templet.select`  select
-- `Table.templet.selects`  select下拉框
+- `Table.templet.select`  select 显示一个
+- `Table.templet.selects`  select 下拉框
 - `Table.templet.tags`  tag
-- `Table.templet.dropdown`  dropdown
+- `Table.templet.dropdown`  dropdown 
+- `Table.templet.operat`  operat
 
 
 格式样板：
@@ -298,11 +299,13 @@ title="添加"><i class="layui-icon layui-icon-add"></i>添加</button >
 ## table事件
 默认的事件有
 - open  打开弹窗
+- request  请求comfirm
+- import 导入事件
+- export 导出事件
 - delete 销毁
 - destroy 删除
-- request 请求
 - refresh  刷新
-- export 导出
+- tabswitch 选项卡切换事件
 - iframe   v1.2.3 新增  打开新的iframe
 - dropdown   v2.6 新增  dropdown
 > 示例
