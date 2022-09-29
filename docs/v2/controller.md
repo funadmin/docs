@@ -1,6 +1,6 @@
 ## 基类控制器
 ~~~
-app/common/controller/Api.php //API接口基类控制器
+fun/auth/Api.php //API接口基类控制器
 app/common/controller/Backend.php //后台基类控制器
 app/common/controller/Frontend.php //前台基类控制器
 app/common/controller/AddonsFrontend .php //插件前台基类控制器
