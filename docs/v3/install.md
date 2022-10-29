@@ -2,7 +2,7 @@
    - star地址 [https://gitee.com/funadmin/funadmin](https://gitee.com/funadmin/funadmin) 
    - star地址 [https://github.com/funadmin/funadmin](https://github.com/funadmin/funadmin) 
 
-![a379b90d1fd3bd7dc2af5b6edd29fc0](https://user-images.githubusercontent.com/65004113/198808917-7697242b-ba18-45cd-a704-17f0043bfd6b.jpg)
+![1667014617054](https://user-images.githubusercontent.com/65004113/198809752-907adc57-dd66-4706-b67a-0b19d0ea6f00.jpg)
 
 ## 环境要求
 * PHP >= 7.4.0  建议7.4或8.0  注意8.1暂不推荐使用 
