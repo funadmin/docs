@@ -2,7 +2,7 @@
 FunAdmin是基于ThinkPHP6.X + Layui +Requirejs的敏捷开发的后台管理系统。
 ## 演示站点
  - 演示地址： [fundemo.funadmin.com](http://fundemo.funadmin.com/2KmvVJA8dU.php) （账号：admin，密码：123456。备注：只有查看信息的权限
- - layui 手册地址 [Layui](https://www.layuion.com)
+ - layui 手册地址 [Layui]([https://www.layuion.com](https://layui.gitee.io/v2))
  - thinkphp6 手册地址  [thinkphp6](https://www.kancloud.cn/manual/thinkphp6_0/1037479)
 ## 主要特性
 
