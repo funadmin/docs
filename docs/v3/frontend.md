@@ -167,7 +167,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
 - totalRowText：开启汇总属性后的汇总行文本
 - totalRow：是否开启该列的自动合计功能，默认：false
 - fixed：固定列，可选值有：*left*、*right*，该列必须设置在最左（left）、最右(right)
-- search：搜索表单字段的格式：`between：区间搜索、not between：不在区间内、timerage： 时间范围、select：下拉框,xmSelect 、range：普通时间范围、time：日期时间，不显示在搜索表单直接设置 **search:false,**`
+- search：搜索表单字段的格式：`between：区间搜索、not between：不在区间内、timerange： 时间范围、select：下拉框,xmSelect 、range：普通时间范围、time：日期时间，不显示在搜索表单直接设置 **search:false,**`
 - templet：模板解析，见JS 模板 - 模板解析
 - operat：操作选项，模板解析为：templet: Table.templet.operat 时生效
 - searchOp 设置搜索条件  默认`%*%`   
