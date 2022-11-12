@@ -110,7 +110,7 @@ define(['jquery','table','form'], function ($,Table,Form) {
                 limit: 15,  //默认行数
                 page: true, //开启多页
             });
-            Table.api.bindEvent(Table.init);
+            Table.api.bindEvent(Table.init.tableId);
         },
         add:function () {
             Controller.api.bindevent()
