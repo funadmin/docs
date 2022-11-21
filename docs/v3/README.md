@@ -4,7 +4,7 @@
 - 应用插件 安装后会把应用迁移到app目录下，并单独作为一个应用，前后台均可以在该应用下完成业务
 ## 演示站点
  - 演示地址： [fundemo.funadmin.com](http://fundemo.funadmin.com/2KmvVJA8dU.php) （账号：admin，密码：123456。备注：只有查看信息的权限
- - layui 手册地址 [Layui](https://www.layuion.com)
+ - layui 手册地址 [Layui](https://layui.gitee.io/v2)
  - thinkphp6 手册地址  [thinkphp6](https://www.kancloud.cn/manual/thinkphp6_0/1037479)
 ## 主要特性
 
