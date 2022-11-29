@@ -335,13 +335,15 @@ edit_full:{
     // full: 1,
     width:'800',
     height:'600',
-    extend:'data-callback="demo(可以填写参数)"'
+    extend:'data-callback="demo(obj,可以填写参数)"'
 },
 ~~~
 这里自定义的函数要在js 里自己写，会自动调用的
 ~~~
-demo = function(可以填写参数){
-    console.log(可以填写参数)
+demo = function(obj,可以填写参数){ //参数可填写可不填
+    console.log(obj)//当前对象
+    console.log(可以填写参数) //参数  可以不填写参数
+
 };
 ~~~
 
